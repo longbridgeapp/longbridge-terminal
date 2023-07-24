@@ -18,7 +18,8 @@ This is also for making a fun, so we can watch the stock market data in the term
 
 ## System Requirements
 
-- macOS and Linux.
+- macOS
+- Linux (next version)
 
 ## Installation
 
