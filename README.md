@@ -1,6 +1,6 @@
 # Longbridge Terminal
 
-A _experimental_ terminal-based app of [Longbridge](https://longportapp.com).
+An _experimental_ terminal-based app of [Longbridge](https://longportapp.com).
 
 We build this app to help our development of the cross-platform Rust library (named: Engine) of Longbridge.
 
@@ -38,4 +38,4 @@ Run `longbridge` can start the app.
 
 ## License
 
-This is not a opensource project, this repository just for release and give a install script.
+This is not a open-source project, this repository just for release and give a install script.
