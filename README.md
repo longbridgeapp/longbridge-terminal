@@ -21,7 +21,7 @@ We build this app to help our development of the cross-platform Rust library (na
 If you'r on macOS or Linux, just run the following command in your terminal:
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/longbridgeapp/longbridge-terminal/main/install | sh
+curl -sSL https://github.com/longbridgeapp/longbridge-terminal/raw/main/install | sh
 ```
 
 Then you will get `longbridge` command in your terminal.

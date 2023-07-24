@@ -2,17 +2,24 @@
 set -u
 type curl > /dev/null || { echo "curl: not found"; exit 1; }
 
-get_latest_release() {
-  curl --silent "https://api.github.com/repos/$repo/releases/latest" | # Get latest release from GitHub api
-    grep '"tag_name":' |                                               # Get tag line
-    sed -E 's/.*"([^"]+)".*/\1/'                                       # Pluck JSON value
-}
 
 repo='longbridgeapp/longbridge-terminal'
 bin_name='longbridge'
-version=`get_latest_release`
+version='0.1.4'
+
 platform="$(uname | tr "[A-Z]" "[a-z]")"  # Linux => linux
 arch="$(uname -m | sed 's/x86_64/amd64/')"  # x86_64 => amd64
+
+if [ "$platform" = "darwin" ]; then
+  platform="mac"
+  arch="universal"
+else 
+  echo "Sorry, Longbridge Terminal is only support macOS in current."
+  echo ""
+  echo "We will release the Linux support soon, please watch the updates on GitHub."
+  echo "https://github.com/longbridgeapp/longbridge-terminal"
+  exit
+fi
 
 echo "Downloading $bin_name@$version ..."
 
@@ -21,7 +28,7 @@ if ldd --version 2>&1 | grep -q 'musl'; then
   libc='-musl'
 fi
 
-curl -Lo $bin_name.tar.gz https://github.com/$repo/releases/download/$version/$bin_name-$platform$libc-$arch.tar.gz
+curl -Lo $bin_name.tar.gz https://download.lbkrs.com/longbridge-tui/prod-$version/$platform/$arch/$bin_name.tar.gz
 tar zxf $bin_name.tar.gz
 
 if test $(id -u) -eq 0; then
@@ -32,3 +39,6 @@ fi
 
 rm $bin_name.tar.gz
 echo "Longbridge Terminal $version has installed successfully."
+echo ""
+echo "You can use `longbridge -h` to get help."
+echo ""
