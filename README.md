@@ -2,7 +2,9 @@
 
 An _experimental_ terminal-based app of [Longbridge](https://longportapp.com).
 
-We build this app to help our development of the cross-platform Rust library (named: Engine) of Longbridge.
+We build this app to help us in development of the cross-platform Rust core library (named: Engine) of Longbridge.
+
+This is also for making a fun, so we can watch the stock market data in the terminal.
 
 ## Features
 
