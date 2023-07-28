@@ -13,13 +13,13 @@ This is also for making a fun, so we can watch the stock market data in the term
 - Watchlist
 - Portfolio
 - Real-time stock data
-- Built on Rust + tui-rs.
-- Vim like keybindings
+- Built on Rust + Ratatui.
+- Vim like keybindings.
 
 ## System Requirements
 
 - macOS
-- Linux (next version)
+- Linux
 
 ## Installation
 
@@ -40,10 +40,14 @@ Run `longbridge` can start the app.
 ## QA
 
 - Q: "Another instance is running, please close it first" error.
-- A: Because of the real-time quote data limit, so you just can start on instance.
+- A: Because of the real-time stock data limited you only have one instance.
+
+---
 
 - Q: "How can I switch another account?"
 - A: Just run `longbridge --logout`, and scan QRCode again.
+
+---
 
 - Q: "Where is the login session storaged at?"
 - A: macOS: `$HOME/Library/Application Support/Longbridge TUI`, Linux: `~/.local/share/Longbridge TUI/`
