@@ -6,7 +6,7 @@ We build this app to help us in development of the cross-platform Rust core libr
 
 This is also for making a fun, so we can watch the stock market data in the terminal.
 
-![Longbridge Terminal - Main Window](https://github.com/longbridgeapp/longbridge-terminal/assets/5518/1b840f87-e441-49dd-b52a-7c81f190429d)
+![longbridge-terminal](https://github.com/longbridgeapp/longbridge-terminal/assets/5518/49c93838-852e-4127-8377-f49876923069)
 
 ## Features
 
