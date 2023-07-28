@@ -37,6 +37,17 @@ $ longbridge
 
 Run `longbridge` can start the app.
 
+## QA
+
+- Q: "Another instance is running, please close it first" error.
+- A: Because of the real-time quote data limit, so you just can start on instance.
+
+- Q: "How can I switch another account?"
+- A: Just run `longbridge --logout`, and scan QRCode again.
+
+- Q: "Where is the login session storaged at?"
+- A: macOS: `$HOME/Library/Application Support/Longbridge TUI`, Linux: `~/.local/share/Longbridge TUI/`
+
 ## License
 
 This is not a open-source project, this repository just for release and give a install script.
